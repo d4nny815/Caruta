@@ -40,11 +40,6 @@ def index():
     return render_template("index.html",user=user)
 
 
-# redirect homepage
-#@app.route("/index.html")
-#def home():
-#    return redirect("/")
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
