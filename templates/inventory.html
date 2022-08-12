@@ -13,15 +13,17 @@
     </div>
     
     <h2>Inventory:</h2>
-    
-    <div>
-        <select name="symbol">
-            <option disabled >Sort By</option>
-            {% for filter in filters %}
-            <option> {{filter}} </option>
-            {% endfor %}
-        </select>
-    <div>
+    <!--
+
+        <div>
+            <select name="symbol">
+                <option disabled >Sort By</option>
+                {% for filter in filters %}
+                <option> {{filter}} </option>
+                {% endfor %}
+            </select>
+            <div>
+    -->
     <table class="table">
         <tr>
             {%for c in cards_recent%}

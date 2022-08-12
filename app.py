@@ -302,7 +302,7 @@ def credits():
     
     if request.method == "POST":
         promo_codes = ["TEST", "ADD", "ONE TIME", "ALE IS GAY"]
-        promo_prizes = [1000, 5000, 100, 1000000]
+        promo_prizes = [1000, 5000, 100, 10000]
         
         code = request.form.get("code").upper()
         for i in range(len(promo_codes)):
