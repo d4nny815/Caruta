@@ -1,0 +1,49 @@
+8/7/22
+	made website accessable outside of local user
+	1st: python3 app.py
+	2nd: sudo socketxp connect http://localhost:5000
+	
+	Got images showing
+		image folder has to be in static for flask
+	
+	Add card program
+		python3 addcards.py year make model
+		add multiple cards of same name to db
+
+8/8/22
+	add images to folder
+	show card in html
+	generate new cards
+		check if card already exist as free
+		if doesnt make new card
+
+8/9/22
+	get generate new cards to work on html
+		before wouldnt detect localhost element
+	added func to claim all types of cards
+	added func to unclaim all cards
+
+8/10/22
+	Collect card to inventory
+	change card statuses
+	show cards in inventory
+	fix register
+		person able to register with existing username
+
+8/11/22
+	change password option
+	kinda forgot password
+	add credit system
+		add code
+		subtract credits after rolling
+
+TODO
+	filter cards in inventory
+		make
+			SELECT card_name FROM cards WHERE card_name LIKE '% mazda %';
+		year
+			SELECT card_name FROM cards ORDER BY card_name;
+	
+
+
+	upgrade html

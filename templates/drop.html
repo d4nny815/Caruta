@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Drop
+{% endblock %}
+
+{% block main %}
+    <h1>Rolling...</h1>
+    
+    <table class="table"  >
+        <thead>
+            <tr style="font-size:3vw">
+                {% for i in range(0,len) %}
+                <th> Card: {{ i+1 }} </th>
+                {%endfor%}
+            </tr>
+        </thead>
+        <tbody>
+        <!--
+            <tr>
+                {% for i in range(0,len) %}
+                <td> card id:{{ card_db[card_id_list[i]-1]["card_id"] }} </td>
+                {%endfor%}
+            </tr>
+            <tr>
+                {% for i in range(0,len) %}
+                <td> unique id:{{ card_id_list[i] }} </td>
+                {%endfor%}
+            </tr>
+            <tr>
+                {% for i in range(0,len) %}
+                <td name="choice{{i + 1}}"> card_name:{{ card_db[card_id_list[i]-1]["card_name"] }} </td>
+                {%endfor%}
+            </tr>
+        -->
+            <tr>
+                {% for i in range(0,len) %}
+                <td><img src="static/images/{{ card_db[card_id_list[i]-1]["card_id"] }}.png"  
+                    alt="pic{{ card_db[card_id_list[i]-1]["card_id"] }}" /></td>
+                    {%endfor%}
+                </tr>
+                <tr>
+                {% for i in range(0,len) %}
+                <form action="/pickup{{i+1}}" method="post">
+                    <td>
+                        <button type="submit">Choose</button>
+                    </td>
+                </form>
+                {%endfor%}
+            </tr>
+        </tbody>
+    </table>
+    
+    <form action="/drop" method="get">
+        <button class="btn btn-primary" type="submit">Roll: 100 credits</button>
+    </form>
+{% endblock %}

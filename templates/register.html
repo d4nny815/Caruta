@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <h1>Register for Caruta Game</h1>
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" 
+            name="email" placeholder="Email" type="email" onkeyup="lettersOnly(this)" >
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" 
+            name="username" placeholder="Username" type="text" onkeyup="lettersOnly(this)" >
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" 
+            name="password" placeholder="Password" type="password" onkeyup="lettersOnly(this)" >
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" 
+            name="confirmation" placeholder="Confirm Password" type="password" onkeyup="lettersOnly(this)" >
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+    <div>
+        <h3>DO NOT use any real passwords this database is not secure</h3>
+    </div>
+{% endblock %}

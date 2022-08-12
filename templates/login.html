@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <h1 style="color:powderblue;"> Caruta Game</h1>
+    <img src="static/images/caruta.png" alt="Caruta Image" style="width:500px;height:500px;"/>
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" 
+            name="username" placeholder="Username" type="text" onkeyup="lettersOnly(this)" >
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" 
+            name="password" placeholder="Password" type="password" onkeyup="lettersOnly(this)" >
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+    <p><a href="/reset"> Forgot/Change Password</a></p>
+    
+{% endblock %}

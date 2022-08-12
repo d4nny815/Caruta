@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %} Inventory {% endblock %}
+
+{% block main %}
+    
+    {%if cards_length > 0%}
+    <div>
+        <!-- Show most recent card -->
+        <h2>Latest card:</h2>
+        <img src="static/images/{{ cards_recent[-1] }}.png"  
+        alt="pic{{ cards_recent[-1] }}" />
+    </div>
+    
+    <h2>Inventory:</h2>
+    
+    <div>
+        <select name="symbol">
+            <option disabled >Sort By</option>
+            {% for filter in filters %}
+            <option> {{filter}} </option>
+            {% endfor %}
+        </select>
+    <div>
+    <table class="table">
+        <tr>
+            {%for c in cards_recent%}
+                <!-- <td>{{c.card_name}}</td> show card name in cell to the left--> 
+                <td><img src="static/images/{{ c }}.png"  
+                        alt="pic{{ c }}" /></td>
+                {%if loop.index%cols == 0%}
+                    </tr>
+                {%endif%}
+            {%endfor%}
+        </tr>
+    
+    </table>
+    {%else%}
+    <h1>Inventory:</h1>
+    {%endif%}
+{% endblock %}

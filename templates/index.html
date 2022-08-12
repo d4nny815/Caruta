@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1>Caruta Game</h1>
+    <form action="/drop" method="get">
+        <button class="btn btn-primary" type="submit">Roll: 100 credits</button>
+    </form>
+{% endblock %}
