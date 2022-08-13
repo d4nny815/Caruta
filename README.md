@@ -1,6 +1,8 @@
 # CS50 Final Project - Caruta Card Game
 #### Video Demo:  <URL HERE>
 #### Description:
+Danny Gutierrez Project
+
 The project is a webpage is based off of Karuta card game on discord. The user uses their credits to roll 3 random car cards and can choose 1 to add to their inventory. The goal is build the best card collection.
 
 Technologies used:
