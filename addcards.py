@@ -7,12 +7,6 @@ from cs50 import SQL
 db = SQL("sqlite:///caruta.db")
 
 
-'''
-#TODO
-#add comments to funcs
-'''
-
-
 def main():
     if len(sys.argv) == 3:
         # python3 addcards.py unclaim {password}
@@ -40,7 +34,7 @@ def main():
     
 def random_list(list, highcard):
     length = len(list)
-    randomlist = random.sample(range(1,highcard),length)
+    randomlist = random.sample(range(1,highcard), length)
     return randomlist
 
 

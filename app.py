@@ -3,10 +3,8 @@ from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
-
-
 from werkzeug.security import check_password_hash, generate_password_hash
-import datetime  # maybe add to inventory db
+import datetime 
 import addcards
 
 from helpers import apology, login_required
@@ -298,7 +296,7 @@ def credits():
     user = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])  # Search db for users info
     
     if request.method == "POST":
-        promo_codes = ["TEST", "ADD", "ONE TIME", "ALE IS GAY"]
+        promo_codes = ["TEST", "ADD", "ONE TIME", "10K"]
         promo_prizes = [1000, 5000, 100, 10000]
         
         code = request.form.get("code").upper()
